@@ -1,7 +1,7 @@
 # MEDICAL RECORDS API
 A medical Records application built with Java 8 (Spring Boot), MariaDB database, Spring Security with JWT authentication, Spring Method Security, Unit Testing with Mockito open source framework, Bean Validation, Custom Exception handling and Swagger Documentation 
 
-## REQUIREMENTS
+### REQUIREMENTS
 For building and running the application you need:
 
 JDK 1.8
@@ -13,15 +13,15 @@ Alternatively you can use the Spring Boot Maven plugin like so:
 
 `mvn spring-boot:run`
 
-## ACCESSING THE APPLICATION
+### ACCESSING THE APPLICATION
 After running the application, the context path of the application can be accessed on the browser or on postman via this context path `http://localhost:9090/medicalrecords-api/`
 
-## FOR SWAGGER DOCUMENTATION
+### FOR SWAGGER DOCUMENTATION
 Swagger documentation can be accessed via `http://localhost:9090/medicalrecords-api/swagger-ui.html/`
 
 ![Screenshot from 2022-04-11 10-22-05](https://github.com/joenan/medical-records-api/blob/main/images/MedicalAPISwagger.png)
 
-## SIGNING IN TO MEDICAL RECORDS API
+### SIGNING IN TO MEDICAL RECORDS API
 Send the JSON object below as a POST request to `http://localhost:9090/medicalrecords-api/v1/auth/signup` where role is either PATIENT, STAFF or ADMIN
 
 ```
