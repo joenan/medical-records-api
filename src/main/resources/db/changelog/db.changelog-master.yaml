@@ -1,0 +1,10 @@
+databaseChangeLog:
+
+  - changeSet:
+      id: 1
+      author: nandomguseen
+
+  - include:
+      file: V1_insert_roles.sql
+      relativeToChangelogFile: true
+
