@@ -1,4 +1,4 @@
-# MEDICAL RECORDS API
+## MEDICAL RECORDS API
 A medical Records application built with Java 8 (Spring Boot), MariaDB database, Spring Security with JWT authentication, Spring Method Security, Unit Testing with Mockito open source framework, Bean Validation, Custom Exception handling and Swagger Documentation 
 
 ### REQUIREMENTS
@@ -41,7 +41,7 @@ And a success response will be with status code 200
     "message": "User registered successfully!"
 }
 ```
-## OBTAINING ACCESS TOKEN AFTER SIGNUP
+### OBTAINING ACCESS TOKEN AFTER SIGNUP
 The access token is needed in order to start calling endpoints. To get the access token, 
 send a POST request with a sample requeest body below to `http://localhost:9090/medicalrecords-api/v1/auth/signin`
 
@@ -67,7 +67,7 @@ and the response if successful, will return with a response code of 200 with the
 }
 ```
 
-## TO CREATE NEW STAFF PROFILE
+### TO CREATE NEW STAFF PROFILE
 send a POST with the examble below to 
 ```
 {
@@ -102,7 +102,7 @@ But if the ``loggedInstaffUuid`` is not valid, then you will get a response belo
 ```
 This is because, only despite being able to login, you cannot still create a new staff without a valid uuid
 
-## TO UPDATE STAFF PROFILE
+### TO UPDATE STAFF PROFILE
 Send the below payload as a PUT request to `http://localhost:9090/medicalrecords-api/api/v1/staff/profile`
 
 ```
@@ -136,7 +136,7 @@ but if the uuid of the logged in staff is invalid, you will get the response bel
   "description": "uri=/medicalrecords-api/api/v1/staff/profile"
 }
 ```
-## TO FETCH ALL PATIENTS PROFILE UPTO 2 YEARS
+### TO FETCH ALL PATIENTS PROFILE UPTO 2 YEARS
 send a GET request with a sample below to `http://localhost:9090/medicalrecords-api/api/v1/patient/profiles/upto/{years}/?loggedInstaffUuid=5e56b9f1-e166-400e-bb00-7691a09da063`
 where {years} in the path variable is the number of years to search for and the url parameter `loggedInstaffUuid` is the loggedin Staff uuid 
 
@@ -166,7 +166,7 @@ if the above GET request is successful, you will receive the following response 
 }
 ```
 
-## TO DOWNLOAD SPECIFIC PATIENT PROFILE INTO CSV
+### TO DOWNLOAD SPECIFIC PATIENT PROFILE INTO CSV
 send a GET request to `http://localhost:9090/medicalrecords-api/api/v1/patient/profile/csv/download/`
 and pass `patientId` as a path variabl.And also add `loggedInstaffUuid` as a url parameter. Below is a sample
 
@@ -176,7 +176,7 @@ If the above query is successful, it will return the csv below
 
 `1,Philips,31,2022-04-11`
 
-## TO DELETE MULTIPLE PATIENT PROFILE BETWEEN DATE RANGE
+### TO DELETE MULTIPLE PATIENT PROFILE BETWEEN DATE RANGE
 send a DELETE request to `http://localhost:9090/medicalrecords-api/api/v1/patient/profiles/delete` with the request body below
 
 ```
@@ -194,35 +194,35 @@ if successful, it will return a response code of 200 with the response message b
 }
 ```
 
-# To steps below shows how to use Postman to interact with the api
+## To steps below shows how to use Postman to interact with the api
 
-## TO SIGNUP FOR MEDICAL RECORDS API
+### TO SIGNUP FOR MEDICAL RECORDS API
 ![Screenshot from 2022-04-11 10-22-05](https://github.com/joenan/medical-records-api/blob/main/images/Signup.png)
 
 
-## TO SIGNIN AND OBTAIN ACCESS TOKEN
+### TO SIGNIN AND OBTAIN ACCESS TOKEN
 ![Screenshot from 2022-04-11 10-22-05](https://github.com/joenan/medical-records-api/blob/main/images/Signin.png)
 
 
-## TO PUT THE ACCESS TOKEN IN THE AUTHORIZATION HEADER
+### TO PUT THE ACCESS TOKEN IN THE AUTHORIZATION HEADER
 ![Screenshot from 2022-04-11 10-22-05](https://github.com/joenan/medical-records-api/blob/main/images/Authorization.png)
 
 
-## TO CREATE NEW STAFF PROFILE
+### TO CREATE NEW STAFF PROFILE
 ![Screenshot from 2022-04-11 10-22-05](https://github.com/joenan/medical-records-api/blob/main/images/CreateStaff.png)
 
 
-## TO UPDATE AN EXISTING STAFF PROFILE
+### TO UPDATE AN EXISTING STAFF PROFILE
 ![Screenshot from 2022-04-11 10-22-05](https://github.com/joenan/medical-records-api/blob/main/images/UpdateStaff.png)
 
 
-## TO FETCH ALL PATIENTS UPTO 2 YEARS
+### TO FETCH ALL PATIENTS UPTO 2 YEARS
 ![Screenshot from 2022-04-11 10-22-05](https://github.com/joenan/medical-records-api/blob/main/images/PatientProfileUpto2years.png)
 
 
-## TO DOWNLOAD A SPECIFIC PATIENTS PROFILE INTO CSV
+### TO DOWNLOAD A SPECIFIC PATIENTS PROFILE INTO CSV
 ![Screenshot from 2022-04-11 10-22-05](https://github.com/joenan/medical-records-api/blob/main/images/PatientCSVProfileDownload.png)
 
 
-## TO DELETE MULTIPLE PATIENT PROFILES BETWEEN DATE RANGE
+### TO DELETE MULTIPLE PATIENT PROFILES BETWEEN DATE RANGE
 ![Screenshot from 2022-04-11 10-22-05](https://github.com/joenan/medical-records-api/blob/main/images/DeleteMultiplePatientProfileByDateRange.png)
