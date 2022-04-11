@@ -1,7 +1,7 @@
 # medical-records-api
 A medical Records application built with Java 8 (Spring Boot), MariaDB database, Spring Security with JWT authentication, Spring Method Security, Unit Testing with Mockito open source framework, Bean Validation, Custom Exception handling and Swagger Documentation 
 
-##Requirements
+## Requirements
 For building and running the application you need:
 
 JDK 1.8
@@ -13,14 +13,14 @@ Alternatively you can use the Spring Boot Maven plugin like so:
 
 `mvn spring-boot:run`
 
-##Accessing the application
+## Accessing the application
 After running the application, the context path of the application can be accessed on the browser or on postman via this context path `http://localhost:9090/medicalrecords-api/`
 
-##For swagger documentation
+## For swagger documentation
 Swagger documentation can be accessed via `http://localhost:9090/medicalrecords-api/swagger-ui.html/`
 ![Screenshot from 2022-04-11 10-22-05](https://github.com/joenan/medical-records-api/blob/main/images/MedicalAPISwagger.png)
 
-##Signing into medical-records-api
+## Signing into medical-records-api
 Send the JSON object below as a POST request to `http://localhost:9090/medicalrecords-api/v1/auth/signup` where role is either PATIENT, STAFF or ADMIN
 
 ```
@@ -40,7 +40,7 @@ And a success response will be with status code 200
     "message": "User registered successfully!"
 }
 ```
-##Obtaining access_token after signup
+## Obtaining access_token after signup
 The access token is needed in order to start calling endpoints. To get the access token, 
 send a POST request with a sample requeest body below to `http://localhost:9090/medicalrecords-api/v1/auth/signin`
 
@@ -66,7 +66,7 @@ and the response if successful, will return with a response code of 200 with the
 }
 ```
 
-##To create a Staff account
+## To create a Staff account
 send a POST with the examble below to 
 ```
 {
@@ -101,7 +101,7 @@ But if the ``loggedInstaffUuid`` is not valid, then you will get a response belo
 ```
 This is because, only despite being able to login, you cannot still create a new staff without a valid uuid
 
-##To update Staff profile
+## To update Staff profile
 Send the below payload as a PUT request to `http://localhost:9090/medicalrecords-api/api/v1/staff/profile`
 
 ```
@@ -135,7 +135,7 @@ but if the uuid of the logged in staff is invalid, you will get the response bel
   "description": "uri=/medicalrecords-api/api/v1/staff/profile"
 }
 ```
-##To fetch all patients profile upto 2 years
+## To fetch all patients profile upto 2 years
 send a GET request with a sample below to `http://localhost:9090/medicalrecords-api/api/v1/patient/profiles/upto/{years}/?loggedInstaffUuid=5e56b9f1-e166-400e-bb00-7691a09da063`
 where {years} in the path variable is the number of years to search for and the url parameter `loggedInstaffUuid` is the loggedin Staff uuid 
 
@@ -175,7 +175,7 @@ If the above query is successful, it will return the csv below
 
 `1,Philips,31,2022-04-11`
 
-##To delete multiple patient profile between date range
+## To delete multiple patient profile between date range
 send a DELETE request to `http://localhost:9090/medicalrecords-api/api/v1/patient/profiles/delete` with the request body below
 
 ```
@@ -195,26 +195,26 @@ if successful, it will return a response code of 200 with the response message b
 
 ## To steps below shows how to use Postman to interact with the api
 
-##To Signup for Medical Records API,
+## To Signup for Medical Records API,
 ![Screenshot from 2022-04-11 10-22-05](https://github.com/joenan/medical-records-api/blob/main/images/Signup.png)
 
-##To sign in and obtain access token,
+## To sign in and obtain access token,
 ![Screenshot from 2022-04-11 10-22-05](https://github.com/joenan/medical-records-api/blob/main/images/Signin.png)
 
-##To put the access token in the authorization header,
+## To put the access token in the authorization header,
 ![Screenshot from 2022-04-11 10-22-05](https://github.com/joenan/medical-records-api/blob/main/images/Authorization.png)
 
-##To create a new staff profile,
+## To create a new staff profile,
 ![Screenshot from 2022-04-11 10-22-05](https://github.com/joenan/medical-records-api/blob/main/images/CreateStaff.png)
 
-##To update an existing staff profile,
+## To update an existing staff profile,
 ![Screenshot from 2022-04-11 10-22-05](https://github.com/joenan/medical-records-api/blob/main/images/UpdateStaff.png)
 
-##To fetch all patients upto 2 years,
+## To fetch all patients upto 2 years,
 ![Screenshot from 2022-04-11 10-22-05](https://github.com/joenan/medical-records-api/blob/main/images/PatientProfileUpto2years.png)
 
-##To download a specific patient’s profile into a csv file,
+## To download a specific patient’s profile into a csv file,
 ![Screenshot from 2022-04-11 10-22-05](https://github.com/joenan/medical-records-api/blob/main/images/PatientCSVProfileDownload.png)
 
-##To delete multiple patient profiles between a date range,
+## To delete multiple patient profiles between a date range,
 ![Screenshot from 2022-04-11 10-22-05](https://github.com/joenan/medical-records-api/blob/main/images/DeleteMultiplePatientProfileByDateRange.png)
