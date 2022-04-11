@@ -193,28 +193,35 @@ if successful, it will return a response code of 200 with the response message b
 }
 ```
 
-## To steps below shows how to use Postman to interact with the api
+# To steps below shows how to use Postman to interact with the api
 
 ## To Signup for Medical Records API,
 ![Screenshot from 2022-04-11 10-22-05](https://github.com/joenan/medical-records-api/blob/main/images/Signup.png)
 
+
 ## To sign in and obtain access token,
 ![Screenshot from 2022-04-11 10-22-05](https://github.com/joenan/medical-records-api/blob/main/images/Signin.png)
+
 
 ## To put the access token in the authorization header,
 ![Screenshot from 2022-04-11 10-22-05](https://github.com/joenan/medical-records-api/blob/main/images/Authorization.png)
 
+
 ## To create a new staff profile,
 ![Screenshot from 2022-04-11 10-22-05](https://github.com/joenan/medical-records-api/blob/main/images/CreateStaff.png)
+
 
 ## To update an existing staff profile,
 ![Screenshot from 2022-04-11 10-22-05](https://github.com/joenan/medical-records-api/blob/main/images/UpdateStaff.png)
 
+
 ## To fetch all patients upto 2 years,
 ![Screenshot from 2022-04-11 10-22-05](https://github.com/joenan/medical-records-api/blob/main/images/PatientProfileUpto2years.png)
 
+
 ## To download a specific patient’s profile into a csv file,
 ![Screenshot from 2022-04-11 10-22-05](https://github.com/joenan/medical-records-api/blob/main/images/PatientCSVProfileDownload.png)
+
 
 ## To delete multiple patient profiles between a date range,
 ![Screenshot from 2022-04-11 10-22-05](https://github.com/joenan/medical-records-api/blob/main/images/DeleteMultiplePatientProfileByDateRange.png)
