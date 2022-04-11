@@ -126,15 +126,16 @@ public class StaffUnitTest {
 
         //Given
         UUID uuid = UUID.randomUUID();
+        Long StaffId = 1L;
         Staff staff = new Staff();
-        staff.setId(1L);
+        staff.setId(StaffId);
         staff.setName("Jonah");
         staff.setRegistrationDate(LocalDate.now());
         staff.setStaffUuid(uuid);
 
         // When
         when(staffRepository.save(staff)).thenReturn(staff);
-        when(staffRepository.findStaffByStaffUuid(uuid)).thenReturn(Optional.of(staff));
+        when(staffRepository.findById(StaffId)).thenReturn(Optional.of(staff));
 
         //Then
         ApiResponseDto response = staffService.updateStaff(staff);

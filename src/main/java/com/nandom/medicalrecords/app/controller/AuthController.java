@@ -69,7 +69,7 @@ public class AuthController {
         System.out.println("AUthentication " + authentication);
 
         SecurityContextHolder.getContext().setAuthentication(authentication);
-        String jwt = jwtUtils.generateJwtToken(authentication);
+        String jwtToken = jwtUtils.generateJwtToken(authentication);
 
         UserDetailsImpl userDetails = (UserDetailsImpl) authentication.getPrincipal();
         System.out.println("Useer Details" +userDetails);
@@ -77,11 +77,17 @@ public class AuthController {
                 .map(item -> item.getAuthority())
                 .collect(Collectors.toList());
 
-        return ResponseEntity.ok(new JwtResponse(jwt,
-                userDetails.getId(),
-                userDetails.getUsername(),
-                userDetails.getEmail(),
-                roles));
+        JwtResponse response = new JwtResponse();
+
+        response.setEmail(userDetails.getEmail());
+        response.setUsername(userDetails.getUsername());
+        response.setId(userDetails.getId());
+        response.setLoggedInstaffUuid(userDetails.getStaffUuid());
+        response.setAccessToken(jwtToken);
+        response.setType("Bearer");
+        response.setRoles(roles);
+
+        return ResponseEntity.ok().body(response);
     }
 
     @ApiOperation(value = "Create new User PATIENT, ADMIN or STAFF as the role", response = ApiResponseDto.class)
@@ -155,7 +161,11 @@ public class AuthController {
         user.setRoles(roles);
         userRepository.save(user);
 
-        return ResponseEntity.ok(new ApiResponseDto("User registered successfully!"));
+        ApiResponseDto apiResponseDto = new ApiResponseDto();
+        apiResponseDto.setCode(200);
+        apiResponseDto.setMessage("User registered successfully!");
+
+        return ResponseEntity.ok().body(apiResponseDto);
     }
 
 

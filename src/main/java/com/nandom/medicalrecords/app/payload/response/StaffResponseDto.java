@@ -16,6 +16,5 @@ public class StaffResponseDto implements Serializable {
     public Long id;
     public String name;
     public UUID staffUuid;
-    public Integer age;
     public LocalDate registrationDate;
 }

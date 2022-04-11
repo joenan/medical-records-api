@@ -5,12 +5,11 @@ import com.nandom.medicalrecords.app.payload.response.ApiResponseDto;
 import com.nandom.medicalrecords.app.payload.response.StaffResponseDto;
 import com.nandom.medicalrecords.app.repository.StaffRepository;
 import com.nandom.medicalrecords.app.service.StaffService;
-import lombok.Data;
 import org.springframework.beans.BeanUtils;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
-import javax.transaction.Transactional;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
@@ -29,7 +28,7 @@ public class StaffServiceImpl implements StaffService {
     @Override
     public ApiResponseDto addStaff(Staff staff) {
 
-        if (staff.getId() == null) {
+        if (staff.getId() == null || staff.getId() == 0) {
             staff.setStaffUuid(UUID.randomUUID());
             staff.setRegistrationDate(LocalDate.now());
         }
@@ -73,14 +72,18 @@ public class StaffServiceImpl implements StaffService {
     public ApiResponseDto updateStaff(Staff staff) {
 
         ApiResponseDto response = new ApiResponseDto();
-        Optional<Staff> staffByUuid = staffRepository.findStaffByStaffUuid(staff.getStaffUuid());
+        Optional<Staff> searchedStaff = staffRepository.findById(staff.getId());
 
-        if (staffByUuid.isPresent()) {
-            Staff savedStaff = staffRepository.save(staff);
+        if (searchedStaff.isPresent()) {
+            searchedStaff.get().setName(staff.getName());
+            System.out.println("---------------------------------------------------------------------------");
+            System.out.println(searchedStaff.get());
+            System.out.println("---------------------------------------------------------------------------");
+
+            Staff savedStaff = staffRepository.save(searchedStaff.get());
 
             StaffResponseDto responseDto = new StaffResponseDto();
             BeanUtils.copyProperties(savedStaff, responseDto);
-
             response.setMessage("Staff records have been updated successfully");
             response.setCode(HttpStatus.OK.value());
             response.setData(responseDto);
@@ -90,8 +93,6 @@ public class StaffServiceImpl implements StaffService {
         response.setMessage("Staff records not found");
         response.setCode(HttpStatus.NOT_FOUND.value());
         return response;
-
-
     }
 
     @Override

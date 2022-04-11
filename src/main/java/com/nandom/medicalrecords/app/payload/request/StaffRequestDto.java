@@ -15,6 +15,9 @@ import java.util.UUID;
 @Data
 public class StaffRequestDto implements Serializable {
 
+    @ApiModelProperty(notes = "Staff Id", name="id", required=false)
+    private Long id;
+
     @ApiModelProperty(example = "name", required = true, dataType = "String", notes = "Full name of Staff")
     @NotNull(message = "Staff name is required")
     private String name;

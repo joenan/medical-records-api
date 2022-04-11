@@ -10,6 +10,7 @@ import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.annotation.Secured;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -44,7 +45,7 @@ public class StaffController {
     public ResponseEntity<ApiResponseDto> saveStaff(@Valid @RequestBody StaffRequestDto data) {
         Staff staff = new Staff();
         BeanUtils.copyProperties(data, staff);
-        return ResponseEntity.ok().body(staffService.addStaff(staff));
+        return ResponseEntity.status(HttpStatus.CREATED).body(staffService.addStaff(staff));
     }
 
     @ApiOperation(value = "Update Staff Profile", response = ApiResponseDto.class)
@@ -60,7 +61,7 @@ public class StaffController {
     public ResponseEntity<ApiResponseDto> updateStaff(@Valid @RequestBody StaffRequestDto data) {
         Staff staff = new Staff();
         BeanUtils.copyProperties(data, staff);
-        return ResponseEntity.ok().body(staffService.addStaff(staff));
+        return ResponseEntity.ok().body(staffService.updateStaff(staff));
     }
 
 

@@ -12,8 +12,8 @@ import org.apache.commons.csv.QuoteMode;
 import org.springframework.beans.BeanUtils;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
-import javax.transaction.Transactional;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
@@ -166,6 +166,7 @@ public class PatientServiceImpl implements PatientService {
     }
 
     @Override
+    @Transactional
     public ApiResponseDto deleteMultiplePatientsLastVisitDateBetween(LocalDate dateFrom, LocalDate dateTo) {
         int deletedRecords = patientRepository.deleteMultiplePatientsLastVisitDateBetween(dateFrom, dateTo);
         ApiResponseDto response = new ApiResponseDto();
@@ -201,19 +202,14 @@ public class PatientServiceImpl implements PatientService {
 
         Optional<Patient> patient = patientRepository.findById(id);
 
-        if(patient.isPresent()) {
+        if (patient.isPresent()) {
             final CSVFormat format = CSVFormat.DEFAULT.withQuoteMode(QuoteMode.MINIMAL);
             List<Patient> patientList = patientRepository.findPatientByIdAndReturnAsList(id);
 
-            try (ByteArrayOutputStream out = new ByteArrayOutputStream();
-                 CSVPrinter csvPrinter = new CSVPrinter(new PrintWriter(out), format);) {
+            try (ByteArrayOutputStream out = new ByteArrayOutputStream(); CSVPrinter csvPrinter = new CSVPrinter(new PrintWriter(out), format);) {
+
                 for (Patient Patient : patientList) {
-                    List<String> data = Arrays.asList(
-                            String.valueOf(Patient.getId()),
-                            Patient.getName(),
-                            String.valueOf(Patient.getAge()),
-                            String.valueOf(Patient.getLastVisitDate())
-                    );
+                    List<String> data = Arrays.asList(String.valueOf(Patient.getId()), Patient.getName(), String.valueOf(Patient.getAge()), String.valueOf(Patient.getLastVisitDate()));
                     csvPrinter.printRecord(data);
                 }
                 csvPrinter.flush();
@@ -221,10 +217,8 @@ public class PatientServiceImpl implements PatientService {
             } catch (IOException e) {
                 throw new RuntimeException("fail to import data to CSV file: " + e.getMessage());
             }
-        }
-
-        else {
-            throw new PatientNotFoundException("Patient with Id: "+id + " not found");
+        } else {
+            throw new PatientNotFoundException("Patient with Id: " + id + " not found");
         }
 
     }

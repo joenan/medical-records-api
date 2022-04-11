@@ -10,6 +10,7 @@ import io.swagger.annotations.*;
 import org.springframework.beans.BeanUtils;
 import org.springframework.core.io.InputStreamResource;
 import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -44,7 +45,7 @@ public class PatientController {
         Patient target = new Patient();
         BeanUtils.copyProperties(data, target);
         System.out.println(target);
-        return ResponseEntity.ok().body(patientService.addPatient(target));
+        return ResponseEntity.status(HttpStatus.CREATED).body(patientService.addPatient(target));
     }
 
 
@@ -92,7 +93,7 @@ public class PatientController {
 
     @PreAuthorize("hasRole('STAFF') and principal.staffUuid == T(java.util.UUID).fromString(#loggedInstaffUuid)")
     @GetMapping("/profiles/upto/{years}/")
-    public ResponseEntity<ApiResponseDto> fetchProfilesUptoStatedYears(@PathVariable("years") Integer years) {
+    public ResponseEntity<ApiResponseDto> fetchProfilesUptoStatedYears(@RequestParam(value = "loggedInstaffUuid", required = true) String loggedInstaffUuid, @PathVariable("years") Integer years) {
         return ResponseEntity.ok().body(patientService.findAllPatientsByAgeUpto(years));
     }
 
@@ -104,7 +105,7 @@ public class PatientController {
             @ApiResponse(code = 403, message = "forbidden!!!"),
             @ApiResponse(code = 404, message = "not found!!!")}
     )
-    @PreAuthorize("hasRole('STAFF') && (returnObject != null && returnObject.uuid == authentication.principal)")
+    @PreAuthorize("hasRole('STAFF') and principal.staffUuid == T(java.util.UUID).fromString(#data.loggedInstaffUuid)")
     @DeleteMapping("/profiles/delete")
     public ResponseEntity<ApiResponseDto> deletePatientProfileByDateRange(@Valid @RequestBody PatientDateRequestDto data) {
         return ResponseEntity.ok().body(patientService.deleteMultiplePatientsLastVisitDateBetween(data.getDateFrom(), data.getDateTo()));
