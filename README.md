@@ -18,6 +18,7 @@ After running the application, the context path of the application can be access
 
 ## FOR SWAGGER DOCUMENTATION
 Swagger documentation can be accessed via `http://localhost:9090/medicalrecords-api/swagger-ui.html/`
+
 ![Screenshot from 2022-04-11 10-22-05](https://github.com/joenan/medical-records-api/blob/main/images/MedicalAPISwagger.png)
 
 ## SIGNING IN TO MEDICAL RECORDS API
