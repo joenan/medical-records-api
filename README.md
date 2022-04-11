@@ -18,7 +18,7 @@ After running the application, the context path of the application can be access
 
 ##For swagger documentation
 Swagger documentation can be accessed via `http://localhost:9090/medicalrecords-api/swagger-ui.html/`
-![Screenshot from 2022-04-11 10-22-05](https://github.com/joenan/medical-records-api/tree/main/MedicalAPISwagger.png)
+![Screenshot from 2022-04-11 10-22-05](https://github.com/joenan/medical-records-api/blob/main/images/MedicalAPISwagger.png)
 
 ##Signing into medical-records-api
 Send the JSON object below as a POST request to `http://localhost:9090/medicalrecords-api/v1/auth/signup` where role is either PATIENT, STAFF or ADMIN
@@ -196,25 +196,25 @@ if successful, it will return a response code of 200 with the response message b
 ## To steps below shows how to use Postman to interact with the api
 
 ##To Signup for Medical Records API,
-![Screenshot from 2022-04-11 10-22-05](https://github.com/joenan/medical-records-api/tree/main/Signup.png)
+![Screenshot from 2022-04-11 10-22-05](https://github.com/joenan/medical-records-api/blob/main/images/Signup.png)
 
 ##To sign in and obtain access token,
-![Screenshot from 2022-04-11 10-22-05](https://github.com/joenan/medical-records-api/tree/main/Signin.png)
+![Screenshot from 2022-04-11 10-22-05](https://github.com/joenan/medical-records-api/blob/main/images/Signin.png)
 
 ##To put the access token in the authorization header,
-![Screenshot from 2022-04-11 10-22-05](https://github.com/joenan/medical-records-api/tree/main/Authorization.png)
+![Screenshot from 2022-04-11 10-22-05](https://github.com/joenan/medical-records-api/blob/main/images/Authorization.png)
 
 ##To create a new staff profile,
-![Screenshot from 2022-04-11 10-22-05](https://github.com/joenan/medical-records-api/tree/main/CreateStaff.png)
+![Screenshot from 2022-04-11 10-22-05](https://github.com/joenan/medical-records-api/blob/main/images/CreateStaff.png)
 
 ##To update an existing staff profile,
-![Screenshot from 2022-04-11 10-22-05](https://github.com/joenan/medical-records-api/tree/main/UpdateStaff.png)
+![Screenshot from 2022-04-11 10-22-05](https://github.com/joenan/medical-records-api/blob/main/images/UpdateStaff.png)
 
 ##To fetch all patients upto 2 years,
-![Screenshot from 2022-04-11 10-22-05](https://github.com/joenan/medical-records-api/tree/main/PatientProfileUpto2years.png)
+![Screenshot from 2022-04-11 10-22-05](https://github.com/joenan/medical-records-api/blob/main/images/PatientProfileUpto2years.png)
 
 ##To download a specific patient’s profile into a csv file,
-![Screenshot from 2022-04-11 10-22-05](https://github.com/joenan/medical-records-api/tree/main/PatientCSVProfileDownload.png)
+![Screenshot from 2022-04-11 10-22-05](https://github.com/joenan/medical-records-api/blob/main/images/PatientCSVProfileDownload.png)
 
 ##To delete multiple patient profiles between a date range,
-![Screenshot from 2022-04-11 10-22-05](https://github.com/joenan/medical-records-api/tree/main/DeleteMultiplePatientProfileByDateRange.png)
+![Screenshot from 2022-04-11 10-22-05](https://github.com/joenan/medical-records-api/blob/main/images/DeleteMultiplePatientProfileByDateRange.png)
