@@ -10,6 +10,8 @@ import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.annotation.Secured;
@@ -75,8 +77,14 @@ public class StaffController {
     )
     @PreAuthorize("hasRole('STAFF') and principal.staffUuid == T(java.util.UUID).fromString(#loggedInstaffUuid)")
     @GetMapping("/profiles")
-    public ResponseEntity<ApiResponseDto> findAllStaff(@RequestParam(value = "loggedInstaffUuid", required = true) String loggedInstaffUuid) {
-        return ResponseEntity.ok().body(staffService.findAllStaff());
+    public ResponseEntity<ApiResponseDto> findAllStaff(
+            @RequestParam(value = "loggedInstaffUuid", required = true) String loggedInstaffUuid,
+            @RequestParam(defaultValue = "0") int page,
+            @RequestParam(defaultValue = "10") int size
+    ) {
+        Pageable paging = PageRequest.of(page, size);
+
+        return ResponseEntity.ok().body(staffService.findAllStaff(paging));
     }
 
 

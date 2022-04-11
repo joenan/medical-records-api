@@ -9,13 +9,14 @@ import com.nandom.medicalrecords.app.service.PatientService;
 import io.swagger.annotations.*;
 import org.springframework.beans.BeanUtils;
 import org.springframework.core.io.InputStreamResource;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
-
 import javax.validation.Valid;
 
 @CrossOrigin(origins = "*", allowedHeaders = "*")
@@ -59,8 +60,14 @@ public class PatientController {
     )
     @PreAuthorize("hasRole('STAFF') and principal.staffUuid == T(java.util.UUID).fromString(#loggedInstaffUuid)")
     @GetMapping("/profiles")
-    public ResponseEntity<ApiResponseDto> getAllPatients(@RequestParam(value = "loggedInstaffUuid", required = true) String loggedInstaffUuid) {
-        return ResponseEntity.ok().body(patientService.findAllPatients());
+    public ResponseEntity<ApiResponseDto> getAllPatients(
+            @RequestParam(value = "loggedInstaffUuid", required = true) String loggedInstaffUuid,
+            @RequestParam(defaultValue = "0") int page,
+            @RequestParam(defaultValue = "10") int size
+        ) {
+        Pageable paging = PageRequest.of(page, size);
+
+        return ResponseEntity.ok().body(patientService.findAllPatients(paging));
     }
 
     @ApiOperation(value = "Download Patient Record in CSV Format", response = ApiResponseDto.class)

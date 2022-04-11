@@ -2,6 +2,7 @@ package com.nandom.medicalrecords.app.service;
 
 import com.nandom.medicalrecords.app.model.Patient;
 import com.nandom.medicalrecords.app.payload.response.ApiResponseDto;
+import org.springframework.data.domain.Pageable;
 
 import java.io.ByteArrayInputStream;
 import java.time.LocalDate;
@@ -9,7 +10,7 @@ import java.util.List;
 
 public interface PatientService {
     ApiResponseDto addPatient(Patient patient);
-    ApiResponseDto findAllPatients();
+    ApiResponseDto findAllPatients(Pageable page);
     ApiResponseDto findAllPatientsByAgeUpto(Integer age);
     ApiResponseDto findAllPatientsByAgeRange(LocalDate dateFrom, LocalDate dateTo);
     ApiResponseDto deletePatient(Long id);

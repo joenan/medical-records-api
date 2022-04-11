@@ -10,6 +10,8 @@ import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVPrinter;
 import org.apache.commons.csv.QuoteMode;
 import org.springframework.beans.BeanUtils;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -51,8 +53,8 @@ public class PatientServiceImpl implements PatientService {
     }
 
     @Override
-    public ApiResponseDto findAllPatients() {
-        List<Patient> patientList = patientRepository.findAll();
+    public ApiResponseDto findAllPatients(Pageable page) {
+        Page<Patient> patientList = patientRepository.findAll(page);
         List<PatientResponseDto> patientResponseDtoList = new ArrayList<>();
         for (Patient source : patientList) {
             PatientResponseDto target = new PatientResponseDto();

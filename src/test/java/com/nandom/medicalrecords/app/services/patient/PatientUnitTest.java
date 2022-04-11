@@ -14,6 +14,8 @@ import org.mockito.ArgumentCaptor;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 
 import java.lang.reflect.Field;
@@ -66,6 +68,9 @@ public class PatientUnitTest {
 
     @Test
     public void getAllPatientsListTest() throws IllegalAccessException {
+        int page = 1;
+        int size = 10;
+
         List<Patient> list = new ArrayList<>();
         Patient patientOne = new Patient("Jonah", 20, LocalDate.now());
         Patient patientTwo = new Patient("Mohammed", 22, LocalDate.now());
@@ -79,7 +84,8 @@ public class PatientUnitTest {
         when(patientRepository.findAll()).thenReturn(list);
 
         //then
-        ApiResponseDto response = patientService.findAllPatients();
+        Pageable paging = PageRequest.of(page, size);
+        ApiResponseDto response = patientService.findAllPatients(paging);
 
         //Get field names from StaffResponseDto
         Field[] myFields = response.getData().getClass().getDeclaredFields();

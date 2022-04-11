@@ -6,6 +6,8 @@ import com.nandom.medicalrecords.app.payload.response.StaffResponseDto;
 import com.nandom.medicalrecords.app.repository.StaffRepository;
 import com.nandom.medicalrecords.app.service.StaffService;
 import org.springframework.beans.BeanUtils;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -116,9 +118,9 @@ public class StaffServiceImpl implements StaffService {
     }
 
     @Override
-    public ApiResponseDto findAllStaff() {
+    public ApiResponseDto findAllStaff(Pageable page) {
 
-        List<Staff> staffList = staffRepository.findAll();
+        Page<Staff> staffList = staffRepository.findAll(page);
         List<StaffResponseDto> staffResponseDtoList = new ArrayList<>();
         for (Staff source : staffList) {
             StaffResponseDto target = new StaffResponseDto();

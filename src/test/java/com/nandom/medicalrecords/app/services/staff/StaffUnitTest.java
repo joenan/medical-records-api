@@ -18,6 +18,8 @@ import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.beans.BeanUtils;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 
 import java.lang.reflect.Field;
@@ -76,6 +78,9 @@ public class StaffUnitTest {
 
     @Test
     public void getAllStaffListTest() throws IllegalAccessException {
+        int page = 1;
+        int size = 10;
+
         List<Staff> list = new ArrayList<Staff>();
         Staff staffOne = new Staff(UUID.randomUUID(), "Jonathan Princewill", LocalDate.now());
         Staff StaffTwo = new Staff(UUID.randomUUID(), "Josepeh Marwa", LocalDate.now());
@@ -89,7 +94,8 @@ public class StaffUnitTest {
         when(staffRepository.findAll()).thenReturn(list);
 
         //then
-        ApiResponseDto response = staffService.findAllStaff();
+        Pageable paging = PageRequest.of(page, size);
+        ApiResponseDto response = staffService.findAllStaff(paging);
 
         //Get field names from StaffResponseDto
         Field[] myFields = response.getData().getClass().getDeclaredFields();
