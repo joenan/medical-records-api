@@ -1,5 +1,5 @@
 ## MEDICAL RECORDS API
-A medical Records application built with Java 8 (Spring Boot), MariaDB database, Spring Security with JWT authentication, Spring Method Security, Unit Testing with Mockito open source framework, Bean Validation, Custom Exception handling and Swagger Documentation 
+A medical Records application built with Java 8 (Spring Boot), MariaDB database, Spring Security with JWT authentication, Spring Method Security, Unit Testing with Mockito open source framework, Bean Validation, Custom Exception handling, Swagger Documentation and Liquibase data migration for migrating bulk sql script data into the database.
 
 ### REQUIREMENTS
 For building and running the application you need:
