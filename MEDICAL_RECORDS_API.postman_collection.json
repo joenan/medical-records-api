@@ -1,0 +1,3050 @@
+{
+	"info": {
+		"_postman_id": "9b84d961-4a40-43de-ab77-c24dfbffa618",
+		"name": "MEDICAL RECORDS API",
+		"description": "Medical Records API\n\nContact Support:\n Name: Nandom Gusen\n Email: nandomgusen@yahoo.com",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "api/v1",
+			"item": [
+				{
+					"name": "patient",
+					"item": [
+						{
+							"name": "profile",
+							"item": [
+								{
+									"name": "Add new Patient",
+									"request": {
+										"auth": {
+											"type": "apikey",
+											"apikey": [
+												{
+													"key": "key",
+													"value": "Authorization",
+													"type": "string"
+												},
+												{
+													"key": "value",
+													"value": "<API Key>",
+													"type": "string"
+												},
+												{
+													"key": "in",
+													"value": "header",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"age\": -68162496,\n  \"loggedInstaffUuid\": \"UUID\",\n  \"name\": \"name\",\n  \"id\": 28423945\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/patient/profile",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"patient",
+												"profile"
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: apikey",
+														"key": "Authorization",
+														"value": "<API Key>"
+													},
+													{
+														"description": "(Required) Access Token",
+														"key": "Authorization",
+														"value": "est"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"age\": -68162496,\n  \"loggedInstaffUuid\": \"UUID\",\n  \"name\": \"name\",\n  \"id\": 28423945\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/patient/profile",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"patient",
+														"profile"
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "Created",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: apikey",
+														"key": "Authorization",
+														"value": "<API Key>"
+													},
+													{
+														"description": "(Required) Access Token",
+														"key": "Authorization",
+														"value": "est"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"age\": -68162496,\n  \"loggedInstaffUuid\": \"UUID\",\n  \"name\": \"name\",\n  \"id\": 28423945\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/patient/profile",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"patient",
+														"profile"
+													]
+												}
+											},
+											"status": "Created",
+											"code": 201,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "Created |OK",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: apikey",
+														"key": "Authorization",
+														"value": "<API Key>"
+													},
+													{
+														"description": "(Required) Access Token",
+														"key": "Authorization",
+														"value": "est"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"age\": -68162496,\n  \"loggedInstaffUuid\": \"UUID\",\n  \"name\": \"name\",\n  \"id\": 28423945\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/patient/profile",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"patient",
+														"profile"
+													]
+												}
+											},
+											"status": "Non-Authoritative Information (since HTTP/1.1)",
+											"code": 203,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "not authorized!",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: apikey",
+														"key": "Authorization",
+														"value": "<API Key>"
+													},
+													{
+														"description": "(Required) Access Token",
+														"key": "Authorization",
+														"value": "est"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"age\": -68162496,\n  \"loggedInstaffUuid\": \"UUID\",\n  \"name\": \"name\",\n  \"id\": 28423945\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/patient/profile",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"patient",
+														"profile"
+													]
+												}
+											},
+											"status": "Unauthorized",
+											"code": 401,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "forbidden!!!",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: apikey",
+														"key": "Authorization",
+														"value": "<API Key>"
+													},
+													{
+														"description": "(Required) Access Token",
+														"key": "Authorization",
+														"value": "est"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"age\": -68162496,\n  \"loggedInstaffUuid\": \"UUID\",\n  \"name\": \"name\",\n  \"id\": 28423945\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/patient/profile",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"patient",
+														"profile"
+													]
+												}
+											},
+											"status": "Forbidden",
+											"code": 403,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "not found!!!",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: apikey",
+														"key": "Authorization",
+														"value": "<API Key>"
+													},
+													{
+														"description": "(Required) Access Token",
+														"key": "Authorization",
+														"value": "est"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"age\": -68162496,\n  \"loggedInstaffUuid\": \"UUID\",\n  \"name\": \"name\",\n  \"id\": 28423945\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/patient/profile",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"patient",
+														"profile"
+													]
+												}
+											},
+											"status": "Not Found",
+											"code": 404,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "Download Patient Record in CSV Format",
+									"request": {
+										"auth": {
+											"type": "apikey",
+											"apikey": [
+												{
+													"key": "key",
+													"value": "Authorization",
+													"type": "string"
+												},
+												{
+													"key": "value",
+													"value": "<API Key>",
+													"type": "string"
+												},
+												{
+													"key": "in",
+													"value": "header",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/patient/profile/csv/download/:patientId?loggedInstaffUuid=est",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"patient",
+												"profile",
+												"csv",
+												"download",
+												":patientId"
+											],
+											"query": [
+												{
+													"key": "loggedInstaffUuid",
+													"value": "est",
+													"description": "(Required) loggedInstaffUuid"
+												}
+											],
+											"variable": [
+												{
+													"key": "patientId",
+													"value": "-87798617",
+													"description": "(Required) patientId"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Success|OK",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: apikey",
+														"key": "Authorization",
+														"value": "<API Key>"
+													},
+													{
+														"description": "(Required) Access Token",
+														"key": "Authorization",
+														"value": "est"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/patient/profile/csv/download/:patientId?loggedInstaffUuid=est",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"patient",
+														"profile",
+														"csv",
+														"download",
+														":patientId"
+													],
+													"query": [
+														{
+															"key": "loggedInstaffUuid",
+															"value": "est"
+														}
+													],
+													"variable": [
+														{
+															"key": "patientId",
+															"value": "-87798617",
+															"description": "(Required) patientId"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "not authorized!",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: apikey",
+														"key": "Authorization",
+														"value": "<API Key>"
+													},
+													{
+														"description": "(Required) Access Token",
+														"key": "Authorization",
+														"value": "est"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/patient/profile/csv/download/:patientId?loggedInstaffUuid=est",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"patient",
+														"profile",
+														"csv",
+														"download",
+														":patientId"
+													],
+													"query": [
+														{
+															"key": "loggedInstaffUuid",
+															"value": "est"
+														}
+													],
+													"variable": [
+														{
+															"key": "patientId",
+															"value": "-87798617",
+															"description": "(Required) patientId"
+														}
+													]
+												}
+											},
+											"status": "Unauthorized",
+											"code": 401,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "forbidden!!!",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: apikey",
+														"key": "Authorization",
+														"value": "<API Key>"
+													},
+													{
+														"description": "(Required) Access Token",
+														"key": "Authorization",
+														"value": "est"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/patient/profile/csv/download/:patientId?loggedInstaffUuid=est",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"patient",
+														"profile",
+														"csv",
+														"download",
+														":patientId"
+													],
+													"query": [
+														{
+															"key": "loggedInstaffUuid",
+															"value": "est"
+														}
+													],
+													"variable": [
+														{
+															"key": "patientId",
+															"value": "-87798617",
+															"description": "(Required) patientId"
+														}
+													]
+												}
+											},
+											"status": "Forbidden",
+											"code": 403,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "not found!!!",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: apikey",
+														"key": "Authorization",
+														"value": "<API Key>"
+													},
+													{
+														"description": "(Required) Access Token",
+														"key": "Authorization",
+														"value": "est"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/patient/profile/csv/download/:patientId?loggedInstaffUuid=est",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"patient",
+														"profile",
+														"csv",
+														"download",
+														":patientId"
+													],
+													"query": [
+														{
+															"key": "loggedInstaffUuid",
+															"value": "est"
+														}
+													],
+													"variable": [
+														{
+															"key": "patientId",
+															"value": "-87798617",
+															"description": "(Required) patientId"
+														}
+													]
+												}
+											},
+											"status": "Not Found",
+											"code": 404,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "profiles",
+							"item": [
+								{
+									"name": "Get list of all Patients in the System ",
+									"request": {
+										"auth": {
+											"type": "apikey",
+											"apikey": [
+												{
+													"key": "key",
+													"value": "Authorization",
+													"type": "string"
+												},
+												{
+													"key": "value",
+													"value": "<API Key>",
+													"type": "string"
+												},
+												{
+													"key": "in",
+													"value": "header",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/patient/profiles?loggedInstaffUuid=est&page=0&size=10",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"patient",
+												"profiles"
+											],
+											"query": [
+												{
+													"key": "loggedInstaffUuid",
+													"value": "est",
+													"description": "(Required) loggedInstaffUuid"
+												},
+												{
+													"key": "page",
+													"value": "0",
+													"description": "page"
+												},
+												{
+													"key": "size",
+													"value": "10",
+													"description": "size"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Success|OK",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: apikey",
+														"key": "Authorization",
+														"value": "<API Key>"
+													},
+													{
+														"description": "(Required) Access Token",
+														"key": "Authorization",
+														"value": "est"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/patient/profiles?loggedInstaffUuid=est&page=0&size=10",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"patient",
+														"profiles"
+													],
+													"query": [
+														{
+															"key": "loggedInstaffUuid",
+															"value": "est"
+														},
+														{
+															"key": "page",
+															"value": "0"
+														},
+														{
+															"key": "size",
+															"value": "10"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "not authorized!",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: apikey",
+														"key": "Authorization",
+														"value": "<API Key>"
+													},
+													{
+														"description": "(Required) Access Token",
+														"key": "Authorization",
+														"value": "est"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/patient/profiles?loggedInstaffUuid=est&page=0&size=10",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"patient",
+														"profiles"
+													],
+													"query": [
+														{
+															"key": "loggedInstaffUuid",
+															"value": "est"
+														},
+														{
+															"key": "page",
+															"value": "0"
+														},
+														{
+															"key": "size",
+															"value": "10"
+														}
+													]
+												}
+											},
+											"status": "Unauthorized",
+											"code": 401,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "forbidden!!!",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: apikey",
+														"key": "Authorization",
+														"value": "<API Key>"
+													},
+													{
+														"description": "(Required) Access Token",
+														"key": "Authorization",
+														"value": "est"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/patient/profiles?loggedInstaffUuid=est&page=0&size=10",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"patient",
+														"profiles"
+													],
+													"query": [
+														{
+															"key": "loggedInstaffUuid",
+															"value": "est"
+														},
+														{
+															"key": "page",
+															"value": "0"
+														},
+														{
+															"key": "size",
+															"value": "10"
+														}
+													]
+												}
+											},
+											"status": "Forbidden",
+											"code": 403,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "not found!!!",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: apikey",
+														"key": "Authorization",
+														"value": "<API Key>"
+													},
+													{
+														"description": "(Required) Access Token",
+														"key": "Authorization",
+														"value": "est"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/patient/profiles?loggedInstaffUuid=est&page=0&size=10",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"patient",
+														"profiles"
+													],
+													"query": [
+														{
+															"key": "loggedInstaffUuid",
+															"value": "est"
+														},
+														{
+															"key": "page",
+															"value": "0"
+														},
+														{
+															"key": "size",
+															"value": "10"
+														}
+													]
+												}
+											},
+											"status": "Not Found",
+											"code": 404,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "Delete all Patients within the specified Date Range",
+									"request": {
+										"auth": {
+											"type": "apikey",
+											"apikey": [
+												{
+													"key": "key",
+													"value": "Authorization",
+													"type": "string"
+												},
+												{
+													"key": "value",
+													"value": "<API Key>",
+													"type": "string"
+												},
+												{
+													"key": "in",
+													"value": "header",
+													"type": "string"
+												}
+											]
+										},
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"dateFrom\": \"2012-02-23\",\n  \"dateTo\": \"2013-08-23\",\n  \"loggedInstaffUuid\": \"UUID\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/patient/profiles/delete",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"patient",
+												"profiles",
+												"delete"
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Success|OK",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: apikey",
+														"key": "Authorization",
+														"value": "<API Key>"
+													},
+													{
+														"description": "(Required) Access Token",
+														"key": "Authorization",
+														"value": "est"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"dateFrom\": \"2012-02-23\",\n  \"dateTo\": \"2013-08-23\",\n  \"loggedInstaffUuid\": \"UUID\"\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/patient/profiles/delete",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"patient",
+														"profiles",
+														"delete"
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "No Content",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: apikey",
+														"key": "Authorization",
+														"value": "<API Key>"
+													},
+													{
+														"description": "(Required) Access Token",
+														"key": "Authorization",
+														"value": "est"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"dateFrom\": \"2012-02-23\",\n  \"dateTo\": \"2013-08-23\",\n  \"loggedInstaffUuid\": \"UUID\"\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/patient/profiles/delete",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"patient",
+														"profiles",
+														"delete"
+													]
+												}
+											},
+											"status": "No Content",
+											"code": 204,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "not authorized!",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: apikey",
+														"key": "Authorization",
+														"value": "<API Key>"
+													},
+													{
+														"description": "(Required) Access Token",
+														"key": "Authorization",
+														"value": "est"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"dateFrom\": \"2012-02-23\",\n  \"dateTo\": \"2013-08-23\",\n  \"loggedInstaffUuid\": \"UUID\"\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/patient/profiles/delete",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"patient",
+														"profiles",
+														"delete"
+													]
+												}
+											},
+											"status": "Unauthorized",
+											"code": 401,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "forbidden!!!",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: apikey",
+														"key": "Authorization",
+														"value": "<API Key>"
+													},
+													{
+														"description": "(Required) Access Token",
+														"key": "Authorization",
+														"value": "est"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"dateFrom\": \"2012-02-23\",\n  \"dateTo\": \"2013-08-23\",\n  \"loggedInstaffUuid\": \"UUID\"\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/patient/profiles/delete",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"patient",
+														"profiles",
+														"delete"
+													]
+												}
+											},
+											"status": "Forbidden",
+											"code": 403,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "not found!!!",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: apikey",
+														"key": "Authorization",
+														"value": "<API Key>"
+													},
+													{
+														"description": "(Required) Access Token",
+														"key": "Authorization",
+														"value": "est"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"dateFrom\": \"2012-02-23\",\n  \"dateTo\": \"2013-08-23\",\n  \"loggedInstaffUuid\": \"UUID\"\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/patient/profiles/delete",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"patient",
+														"profiles",
+														"delete"
+													]
+												}
+											},
+											"status": "Not Found",
+											"code": 404,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "Fetch all patients from Zero years to the specified years",
+									"request": {
+										"auth": {
+											"type": "apikey",
+											"apikey": [
+												{
+													"key": "key",
+													"value": "Authorization",
+													"type": "string"
+												},
+												{
+													"key": "value",
+													"value": "<API Key>",
+													"type": "string"
+												},
+												{
+													"key": "in",
+													"value": "header",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/patient/profiles/upto/:years/?loggedInstaffUuid=est",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"patient",
+												"profiles",
+												"upto",
+												":years",
+												""
+											],
+											"query": [
+												{
+													"key": "loggedInstaffUuid",
+													"value": "est",
+													"description": "(Required) loggedInstaffUuid"
+												}
+											],
+											"variable": [
+												{
+													"key": "years",
+													"value": "-87798617",
+													"description": "(Required) years"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Success|OK",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: apikey",
+														"key": "Authorization",
+														"value": "<API Key>"
+													},
+													{
+														"description": "(Required) Access Token",
+														"key": "Authorization",
+														"value": "est"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/patient/profiles/upto/:years/?loggedInstaffUuid=est",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"patient",
+														"profiles",
+														"upto",
+														":years",
+														""
+													],
+													"query": [
+														{
+															"key": "loggedInstaffUuid",
+															"value": "est"
+														}
+													],
+													"variable": [
+														{
+															"key": "years",
+															"value": "-87798617",
+															"description": "(Required) years"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "not authorized!",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: apikey",
+														"key": "Authorization",
+														"value": "<API Key>"
+													},
+													{
+														"description": "(Required) Access Token",
+														"key": "Authorization",
+														"value": "est"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/patient/profiles/upto/:years/?loggedInstaffUuid=est",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"patient",
+														"profiles",
+														"upto",
+														":years",
+														""
+													],
+													"query": [
+														{
+															"key": "loggedInstaffUuid",
+															"value": "est"
+														}
+													],
+													"variable": [
+														{
+															"key": "years",
+															"value": "-87798617",
+															"description": "(Required) years"
+														}
+													]
+												}
+											},
+											"status": "Unauthorized",
+											"code": 401,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "forbidden!!!",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: apikey",
+														"key": "Authorization",
+														"value": "<API Key>"
+													},
+													{
+														"description": "(Required) Access Token",
+														"key": "Authorization",
+														"value": "est"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/patient/profiles/upto/:years/?loggedInstaffUuid=est",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"patient",
+														"profiles",
+														"upto",
+														":years",
+														""
+													],
+													"query": [
+														{
+															"key": "loggedInstaffUuid",
+															"value": "est"
+														}
+													],
+													"variable": [
+														{
+															"key": "years",
+															"value": "-87798617",
+															"description": "(Required) years"
+														}
+													]
+												}
+											},
+											"status": "Forbidden",
+											"code": 403,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "not found!!!",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: apikey",
+														"key": "Authorization",
+														"value": "<API Key>"
+													},
+													{
+														"description": "(Required) Access Token",
+														"key": "Authorization",
+														"value": "est"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/patient/profiles/upto/:years/?loggedInstaffUuid=est",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"patient",
+														"profiles",
+														"upto",
+														":years",
+														""
+													],
+													"query": [
+														{
+															"key": "loggedInstaffUuid",
+															"value": "est"
+														}
+													],
+													"variable": [
+														{
+															"key": "years",
+															"value": "-87798617",
+															"description": "(Required) years"
+														}
+													]
+												}
+											},
+											"status": "Not Found",
+											"code": 404,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "staff",
+					"item": [
+						{
+							"name": "profile",
+							"item": [
+								{
+									"name": "Update Staff Profile",
+									"request": {
+										"auth": {
+											"type": "apikey",
+											"apikey": [
+												{
+													"key": "key",
+													"value": "Authorization",
+													"type": "string"
+												},
+												{
+													"key": "value",
+													"value": "<API Key>",
+													"type": "string"
+												},
+												{
+													"key": "in",
+													"value": "header",
+													"type": "string"
+												}
+											]
+										},
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"loggedInstaffUuid\": \"UUID\",\n  \"name\": \"name\",\n  \"id\": 15148174\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/staff/profile",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"staff",
+												"profile"
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Success|OK",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: apikey",
+														"key": "Authorization",
+														"value": "<API Key>"
+													},
+													{
+														"description": "(Required) Access Token",
+														"key": "Authorization",
+														"value": "est"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/staff/profile",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"staff",
+														"profile"
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "Created",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: apikey",
+														"key": "Authorization",
+														"value": "<API Key>"
+													},
+													{
+														"description": "(Required) Access Token",
+														"key": "Authorization",
+														"value": "est"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/staff/profile",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"staff",
+														"profile"
+													]
+												}
+											},
+											"status": "Created",
+											"code": 201,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "not authorized!",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: apikey",
+														"key": "Authorization",
+														"value": "<API Key>"
+													},
+													{
+														"description": "(Required) Access Token",
+														"key": "Authorization",
+														"value": "est"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/staff/profile",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"staff",
+														"profile"
+													]
+												}
+											},
+											"status": "Unauthorized",
+											"code": 401,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "forbidden!!!",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: apikey",
+														"key": "Authorization",
+														"value": "<API Key>"
+													},
+													{
+														"description": "(Required) Access Token",
+														"key": "Authorization",
+														"value": "est"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/staff/profile",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"staff",
+														"profile"
+													]
+												}
+											},
+											"status": "Forbidden",
+											"code": 403,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "not found!!!",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: apikey",
+														"key": "Authorization",
+														"value": "<API Key>"
+													},
+													{
+														"description": "(Required) Access Token",
+														"key": "Authorization",
+														"value": "est"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/staff/profile",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"staff",
+														"profile"
+													]
+												}
+											},
+											"status": "Not Found",
+											"code": 404,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "Create a new staff Profile",
+									"request": {
+										"auth": {
+											"type": "apikey",
+											"apikey": [
+												{
+													"key": "key",
+													"value": "Authorization",
+													"type": "string"
+												},
+												{
+													"key": "value",
+													"value": "<API Key>",
+													"type": "string"
+												},
+												{
+													"key": "in",
+													"value": "header",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"loggedInstaffUuid\": \"UUID\",\n  \"name\": \"name\",\n  \"id\": 15148174\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/staff/profile/",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"staff",
+												"profile",
+												""
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: apikey",
+														"key": "Authorization",
+														"value": "<API Key>"
+													},
+													{
+														"description": "(Required) Access Token",
+														"key": "Authorization",
+														"value": "est"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/staff/profile/",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"staff",
+														"profile",
+														""
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "Created",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: apikey",
+														"key": "Authorization",
+														"value": "<API Key>"
+													},
+													{
+														"description": "(Required) Access Token",
+														"key": "Authorization",
+														"value": "est"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/staff/profile/",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"staff",
+														"profile",
+														""
+													]
+												}
+											},
+											"status": "Created",
+											"code": 201,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "Created",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: apikey",
+														"key": "Authorization",
+														"value": "<API Key>"
+													},
+													{
+														"description": "(Required) Access Token",
+														"key": "Authorization",
+														"value": "est"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/staff/profile/",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"staff",
+														"profile",
+														""
+													]
+												}
+											},
+											"status": "Non-Authoritative Information (since HTTP/1.1)",
+											"code": 203,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "not authorized!",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: apikey",
+														"key": "Authorization",
+														"value": "<API Key>"
+													},
+													{
+														"description": "(Required) Access Token",
+														"key": "Authorization",
+														"value": "est"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/staff/profile/",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"staff",
+														"profile",
+														""
+													]
+												}
+											},
+											"status": "Unauthorized",
+											"code": 401,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "forbidden!!!",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: apikey",
+														"key": "Authorization",
+														"value": "<API Key>"
+													},
+													{
+														"description": "(Required) Access Token",
+														"key": "Authorization",
+														"value": "est"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/staff/profile/",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"staff",
+														"profile",
+														""
+													]
+												}
+											},
+											"status": "Forbidden",
+											"code": 403,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "not found!!!",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: apikey",
+														"key": "Authorization",
+														"value": "<API Key>"
+													},
+													{
+														"description": "(Required) Access Token",
+														"key": "Authorization",
+														"value": "est"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/staff/profile/",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"staff",
+														"profile",
+														""
+													]
+												}
+											},
+											"status": "Not Found",
+											"code": 404,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "Find all Staff",
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "key",
+											"value": "Authorization",
+											"type": "string"
+										},
+										{
+											"key": "value",
+											"value": "<API Key>",
+											"type": "string"
+										},
+										{
+											"key": "in",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/v1/staff/profiles?loggedInstaffUuid=est&page=0&size=10",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"staff",
+										"profiles"
+									],
+									"query": [
+										{
+											"key": "loggedInstaffUuid",
+											"value": "est",
+											"description": "(Required) loggedInstaffUuid"
+										},
+										{
+											"key": "page",
+											"value": "0",
+											"description": "page"
+										},
+										{
+											"key": "size",
+											"value": "10",
+											"description": "size"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success|OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											},
+											{
+												"description": "(Required) Access Token",
+												"key": "Authorization",
+												"value": "est"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/staff/profiles?loggedInstaffUuid=est&page=0&size=10",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"staff",
+												"profiles"
+											],
+											"query": [
+												{
+													"key": "loggedInstaffUuid",
+													"value": "est"
+												},
+												{
+													"key": "page",
+													"value": "0"
+												},
+												{
+													"key": "size",
+													"value": "10"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "not authorized!",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											},
+											{
+												"description": "(Required) Access Token",
+												"key": "Authorization",
+												"value": "est"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/staff/profiles?loggedInstaffUuid=est&page=0&size=10",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"staff",
+												"profiles"
+											],
+											"query": [
+												{
+													"key": "loggedInstaffUuid",
+													"value": "est"
+												},
+												{
+													"key": "page",
+													"value": "0"
+												},
+												{
+													"key": "size",
+													"value": "10"
+												}
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "forbidden!!!",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											},
+											{
+												"description": "(Required) Access Token",
+												"key": "Authorization",
+												"value": "est"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/staff/profiles?loggedInstaffUuid=est&page=0&size=10",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"staff",
+												"profiles"
+											],
+											"query": [
+												{
+													"key": "loggedInstaffUuid",
+													"value": "est"
+												},
+												{
+													"key": "page",
+													"value": "0"
+												},
+												{
+													"key": "size",
+													"value": "10"
+												}
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "not found!!!",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											},
+											{
+												"description": "(Required) Access Token",
+												"key": "Authorization",
+												"value": "est"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/staff/profiles?loggedInstaffUuid=est&page=0&size=10",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"staff",
+												"profiles"
+											],
+											"query": [
+												{
+													"key": "loggedInstaffUuid",
+													"value": "est"
+												},
+												{
+													"key": "page",
+													"value": "0"
+												},
+												{
+													"key": "size",
+													"value": "10"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "v1/auth",
+			"item": [
+				{
+					"name": "Signin to your account and obtain access token",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								},
+								{
+									"key": "value",
+									"value": "<API Key>",
+									"type": "string"
+								},
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"password\": \"in nulla enim\",\n  \"username\": \"Excepteur\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/v1/auth/signin",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v1",
+								"auth",
+								"signin"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success|OK",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: apikey",
+										"key": "Authorization",
+										"value": "<API Key>"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"password\": \"in nulla enim\",\n  \"username\": \"Excepteur\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/v1/auth/signin",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"v1",
+										"auth",
+										"signin"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Created",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: apikey",
+										"key": "Authorization",
+										"value": "<API Key>"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"password\": \"in nulla enim\",\n  \"username\": \"Excepteur\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/v1/auth/signin",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"v1",
+										"auth",
+										"signin"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "not authorized!",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: apikey",
+										"key": "Authorization",
+										"value": "<API Key>"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"password\": \"in nulla enim\",\n  \"username\": \"Excepteur\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/v1/auth/signin",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"v1",
+										"auth",
+										"signin"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "forbidden!!!",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: apikey",
+										"key": "Authorization",
+										"value": "<API Key>"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"password\": \"in nulla enim\",\n  \"username\": \"Excepteur\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/v1/auth/signin",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"v1",
+										"auth",
+										"signin"
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "not found!!!",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: apikey",
+										"key": "Authorization",
+										"value": "<API Key>"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"password\": \"in nulla enim\",\n  \"username\": \"Excepteur\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/v1/auth/signin",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"v1",
+										"auth",
+										"signin"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "Create new User PATIENT, ADMIN or STAFF as the role",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								},
+								{
+									"key": "value",
+									"value": "<API Key>",
+									"type": "string"
+								},
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"cu\",\n  \"password\": \"et proident nostrud\",\n  \"role\": [\n    \"quis proident\",\n    \"qui amet\"\n  ],\n  \"username\": \"dolore\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/v1/auth/signup",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v1",
+								"auth",
+								"signup"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: apikey",
+										"key": "Authorization",
+										"value": "<API Key>"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"email\": \"consectetur consequat sit eu\",\n  \"password\": \"dolor nulla\",\n  \"role\": [\n    \"quis id nulla do\",\n    \"labore fugiat ut\"\n  ],\n  \"username\": \"labore non sit\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/v1/auth/signup",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"v1",
+										"auth",
+										"signup"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Created",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: apikey",
+										"key": "Authorization",
+										"value": "<API Key>"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"email\": \"consectetur consequat sit eu\",\n  \"password\": \"dolor nulla\",\n  \"role\": [\n    \"quis id nulla do\",\n    \"labore fugiat ut\"\n  ],\n  \"username\": \"labore non sit\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/v1/auth/signup",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"v1",
+										"auth",
+										"signup"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Success|OK",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: apikey",
+										"key": "Authorization",
+										"value": "<API Key>"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"email\": \"consectetur consequat sit eu\",\n  \"password\": \"dolor nulla\",\n  \"role\": [\n    \"quis id nulla do\",\n    \"labore fugiat ut\"\n  ],\n  \"username\": \"labore non sit\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/v1/auth/signup",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"v1",
+										"auth",
+										"signup"
+									]
+								}
+							},
+							"status": "Non-Authoritative Information (since HTTP/1.1)",
+							"code": 203,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "not authorized!",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: apikey",
+										"key": "Authorization",
+										"value": "<API Key>"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"email\": \"consectetur consequat sit eu\",\n  \"password\": \"dolor nulla\",\n  \"role\": [\n    \"quis id nulla do\",\n    \"labore fugiat ut\"\n  ],\n  \"username\": \"labore non sit\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/v1/auth/signup",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"v1",
+										"auth",
+										"signup"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "forbidden!!!",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: apikey",
+										"key": "Authorization",
+										"value": "<API Key>"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"email\": \"consectetur consequat sit eu\",\n  \"password\": \"dolor nulla\",\n  \"role\": [\n    \"quis id nulla do\",\n    \"labore fugiat ut\"\n  ],\n  \"username\": \"labore non sit\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/v1/auth/signup",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"v1",
+										"auth",
+										"signup"
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "not found!!!",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: apikey",
+										"key": "Authorization",
+										"value": "<API Key>"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"email\": \"consectetur consequat sit eu\",\n  \"password\": \"dolor nulla\",\n  \"role\": [\n    \"quis id nulla do\",\n    \"labore fugiat ut\"\n  ],\n  \"username\": \"labore non sit\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/v1/auth/signup",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"v1",
+										"auth",
+										"signup"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "//localhost:9090/medicalrecords-api",
+			"type": "string"
+		}
+	]
+}
