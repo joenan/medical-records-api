@@ -17,7 +17,7 @@ Alternatively you can use the Spring Boot Maven plugin like so:
 [Click here to test the deployed api on swagger](http://63.250.53.24:9090/medicalrecords-api/swagger-ui.html)
 
 ### FOR POSTMAN COLLECTION
-The postman collection for medical-records-api can be downloaded [here](https://github.com/joenan/medical-records-api/blob/main/MEDICAL_RECORDS_API.postman_collection.json)
+The postman collection for medical-records-api can be accessed [here](https://github.com/joenan/medical-records-api/blob/main/MEDICAL_RECORDS_API.postman_collection.json). Remember to copy the file and save it as a json file in this format. For example, MEDICAL_RECORDS_API.postman_collection.json
 
 ### ACCESSING THE APPLICATION
 After running the application on your local system, the context path of the application can be accessed on the browser or on postman via this context path `http://localhost:9090/medicalrecords-api/`
