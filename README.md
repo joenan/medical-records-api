@@ -13,6 +13,9 @@ Alternatively you can use the Spring Boot Maven plugin like so:
 
 `mvn spring-boot:run`
 
+### TESTING THE LIVE API USING SWAGGER
+[Click here for live swagger test](http://63.250.53.24:9090/medicalrecords-api/swagger-ui.html)
+
 ### ACCESSING THE APPLICATION
 After running the application, the context path of the application can be accessed on the browser or on postman via this context path `http://localhost:9090/medicalrecords-api/`
 
