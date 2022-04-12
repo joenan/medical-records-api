@@ -50,7 +50,7 @@ And a success response will be with status code 200
 ```
 ### OBTAINING ACCESS TOKEN AFTER SIGNUP
 The access token is needed in order to start calling endpoints. To get the access token, 
-send a POST request with a sample requeest body below to `http://localhost:9090/medicalrecords-api/v1/auth/signin`
+send a POST request with a sample request body below to `http://localhost:9090/medicalrecords-api/v1/auth/signin`
 
 ```
 {
