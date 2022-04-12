@@ -24,7 +24,7 @@ Also note, the postman collection is also included in this repository. It can be
 After running the application on your local system, the context path of the application can be accessed on the browser or on postman via this context path `http://localhost:9090/medicalrecords-api/`
 
 ### FOR SWAGGER DOCUMENTATION
-Swagger documentation can be accessed via `http://localhost:9090/medicalrecords-api/swagger-ui.html/`
+Swagger documentation on your local system can be accessed via `http://localhost:9090/medicalrecords-api/swagger-ui.html/`
 
 ![Screenshot from 2022-04-11 10-22-05](https://github.com/joenan/medical-records-api/blob/main/images/MedicalAPISwagger.png)
 
