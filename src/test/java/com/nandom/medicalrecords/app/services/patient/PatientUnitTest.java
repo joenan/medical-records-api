@@ -2,6 +2,7 @@ package com.nandom.medicalrecords.app.services.patient;
 
 
 import com.nandom.medicalrecords.app.model.Patient;
+import com.nandom.medicalrecords.app.model.Staff;
 import com.nandom.medicalrecords.app.payload.response.ApiResponseDto;
 import com.nandom.medicalrecords.app.repository.PatientRepository;
 import com.nandom.medicalrecords.app.service.PatientService;
@@ -14,6 +15,8 @@ import org.mockito.ArgumentCaptor;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
@@ -80,11 +83,14 @@ public class PatientUnitTest {
         list.add(patientTwo);
         list.add(patientThree);
 
+        Page<Patient> pageList = new PageImpl<>(list);
+
+        Pageable paging = PageRequest.of(page, size);
+
         //When
-        when(patientRepository.findAll()).thenReturn(list);
+        when(patientRepository.findAll(paging)).thenReturn(pageList);
 
         //then
-        Pageable paging = PageRequest.of(page, size);
         ApiResponseDto response = patientService.findAllPatients(paging);
 
         //Get field names from StaffResponseDto

@@ -18,6 +18,8 @@ import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.beans.BeanUtils;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
@@ -81,7 +83,7 @@ public class StaffUnitTest {
         int page = 1;
         int size = 10;
 
-        List<Staff> list = new ArrayList<Staff>();
+        List<Staff> list = new ArrayList<>();
         Staff staffOne = new Staff(UUID.randomUUID(), "Jonathan Princewill", LocalDate.now());
         Staff StaffTwo = new Staff(UUID.randomUUID(), "Josepeh Marwa", LocalDate.now());
         Staff staffThree = new Staff(UUID.randomUUID(), "Stephen Ashley", LocalDate.now());
@@ -90,11 +92,14 @@ public class StaffUnitTest {
         list.add(StaffTwo);
         list.add(staffThree);
 
+        Page<Staff> pageList = new PageImpl<>(list);
+
+        Pageable paging = PageRequest.of(page, size);
         //When
-        when(staffRepository.findAll()).thenReturn(list);
+        when(staffRepository.findAll(paging)).thenReturn(pageList);
 
         //then
-        Pageable paging = PageRequest.of(page, size);
+
         ApiResponseDto response = staffService.findAllStaff(paging);
 
         //Get field names from StaffResponseDto
