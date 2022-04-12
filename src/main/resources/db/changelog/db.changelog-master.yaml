@@ -5,6 +5,6 @@ databaseChangeLog:
       author: nandomguseen
 
   - include:
-      file: V1_insert_roles.sql
+      file: create_tables_and_populate_data.sql
       relativeToChangelogFile: true
 

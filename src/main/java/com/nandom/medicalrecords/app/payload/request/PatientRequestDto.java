@@ -10,15 +10,18 @@ import java.util.UUID;
 @Data
 public class PatientRequestDto implements Serializable {
 
-    @ApiModelProperty(example = "name", required = true, dataType = "String", notes = "Full name of Patient")
+    @ApiModelProperty(position = 0 ,notes = "Staff Id", name="id", required=false)
+    private Long id;
+
+    @ApiModelProperty(position = 1, example = "name", required = true, dataType = "String", notes = "Full name of Patient")
     @NotNull(message = "Patient name is required")
     private String name;
 
-    @ApiModelProperty(example = "age", required = true, dataType = "Integer", notes = "Age of Patient")
+    @ApiModelProperty(position = 2, notes = "age", name="age", required = true)
     @NotNull(message = "Patient age is required")
     private Integer age;
 
-    @ApiModelProperty(example = "UUID", required = true, dataType = "UUID", notes = "Logged in UUID of staff")
+    @ApiModelProperty(position = 3, example = "UUID", required = true, dataType = "UUID", notes = "Logged in UUID of staff")
     @NotNull(message = "Logged in Staff UUID is required")
     private UUID loggedInstaffUuid;
 }
